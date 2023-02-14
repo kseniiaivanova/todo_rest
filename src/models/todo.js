@@ -12,6 +12,12 @@ const TodoSchema = new mongoose.Schema(
       type: String,
       maxLength: 500,
     },
+
+    list: {
+      type: mongoose.Schema.Types.ObjectId,
+			ref: 'List',
+			required: true,
+    }
   },
   {
     timestamps: true,
